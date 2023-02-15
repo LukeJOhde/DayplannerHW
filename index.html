@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+<div id="hour8" class="row time-block">
+  <div class="col-md-1 hour">8 am</div>
+
+  
+  <textarea id="8text" class="col-md-10 description"></textarea>
+  <button id="8Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour9" class="row time-block">
+  <div class="col-md-1 hour">9 am</div>
+  <textarea id="9text" class="col-md-10 description"></textarea>
+  <button id="9Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour10" class="row time-block">
+  <div class="col-md-1 hour">10 am</div>
+  <textarea id="10text" class="col-md-10 description"></textarea>
+  <button id="10Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour11" class="row time-block">
+  <div class="col-md-1 hour">11 am</div>
+  <textarea id="11text" class="col-md-10 description"></textarea>
+  <button id="11Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour12" class="row time-block">
+  <div class="col-md-1 hour">12 pm</div>
+  <textarea id="12text" class="col-md-10 description"></textarea>
+  <button id="12Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour1" class="row time-block">
+  <div class="col-md-1 hour">1 pm</div>
+  <textarea id="1text" class="col-md-10 description"></textarea>
+  <button id="1Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour2" class="row time-block">
+  <div class="col-md-1 hour">2 pm</div>
+  <textarea id="2text" class="col-md-10 description"></textarea>
+  <button id="2Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour3" class="row time-block">
+  <div class="col-md-1 hour">3 pm</div>
+  <textarea id="3text" class="col-md-10 description"></textarea>
+  <button id="3Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour4" class="row time-block">
+  <div class="col-md-1 hour">4 pm</div>
+  <textarea id="4text" class="col-md-10 description"></textarea>
+  <button id="4Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+<div id="hour5" class="row time-block">
+  <div class="col-md-1 hour">5 pm</div>
+  <textarea id="5text" class="col-md-10 description"></textarea>
+  <button id="5Btn" class= "btn col-md-1 saveBtn">save</button>
+</div>
+
+</div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script>
+$( document ).ready(function () {
+  
+  var a = moment()
+  a.format()
+console.log(a)
+let currenthour = 8
+  let currentDay = a._d
+  
+  $("#8text").val(localStorage.getItem("8text"))
+       
+
+          $("#8Btn").on('click', function () {
+            localStorage.setItem("8text", $("#8text").val())
+          })
+
+      $("#9text").val(localStorage.getItem("9text"))
+       
+
+          $("#9Btn").on('click', function () {
+         localStorage.setItem("9text", $("#9text").val())
+          })
+           
+          $("#10text").val(localStorage.getItem("10text"))
+       
+
+          $("#10Btn").on('click', function () {
+         localStorage.setItem("10text", $("#10text").val())
+          })
+
+          $("#11text").val(localStorage.getItem("11text"))
+       
+
+       $("#11Btn").on('click', function () {
+      localStorage.setItem("11text", $("#11text").val())
+       })
+
+       $("#12text").val(localStorage.getItem("12text"))
+       
+
+       $("#12Btn").on('click', function () {
+      localStorage.setItem("12text", $("#12text").val())
+       })
+
+       $("#1text").val(localStorage.getItem("1text"))
+       
+
+       $("#1Btn").on('click', function () {
+      localStorage.setItem("1text", $("#1text").val())
+       })
+
+       $("#2text").val(localStorage.getItem("2text"))
+       
+
+       $("#2Btn").on('click', function () {
+      localStorage.setItem("2text", $("#2text").val())
+       })
+
+       $("#3text").val(localStorage.getItem("3text"))
+       
+
+       $("#3Btn").on('click', function () {
+      localStorage.setItem("3text", $("#3text").val())
+       })
+
+       $("#4text").val(localStorage.getItem("4text"))
+       
+
+       $("#4Btn").on('click', function () {
+      localStorage.setItem("4text", $("#4text").val())
+       })
+
+       $("#5text").val(localStorage.getItem("5text"))
+       
+
+       $("#5Btn").on('click', function () {
+      localStorage.setItem("5text", $("#5text").val())
+       })
+     
+       if (currenthour < 8) {
+        $("#hour8").addClass('future')
+        $("#hour9").addClass("future")
+        $("#hour10").addClass("future")
+        $("#hour11").addClass("future")
+        $("#hour12").addClass("future")
+        $("#hour1").addClass("future")
+        $("#hour2").addClass("future")
+        $("#hour3").addClass("future")
+        $("#hour4").addClass("future")
+        $("#hour5").addClass("future")
+       }
+       if (currenthour === 8 ) {
+        $("#hour8").addClass('present')
+        $("#hour9").addClass("future")
+        $("#hour10").addClass("future")
+        $("#hour11").addClass("future")
+        $("#hour12").addClass("future")
+        $("#hour1").addClass("future")
+        $("#hour2").addClass("future")
+        $("#hour3").addClass("future")
+        $("#hour4").addClass("future")
+        $("#hour5").addClass("future")
+       }
+});
+
+
+    </script>
+  </body>
+</html>
